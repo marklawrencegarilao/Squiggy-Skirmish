@@ -191,8 +191,8 @@ body {
 /**/
 
 #game-container {
-    height: 550px;
-    width: 350px;
+    height: 80vh;
+    width: 30vw;
     text-align: center;
     align-items: center;
     display: flex;
