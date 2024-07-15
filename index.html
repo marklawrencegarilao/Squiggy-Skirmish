@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squiggy Skirmish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+<div id="main">
+    <div id="game-container-wrap">
+        <div id="game-container">
+            <h1>SQUIGGY SKIRMISH</h1>
+            <div id="game-coins">
+                <div id="squiggy" onclick="tapHamster()">
+                    <img src="squiggy.jpg">
+                </div>
+                <span id="coins">0</span>
+                <button id="upgrade" onclick="upgradeHamster()">Upgrade</button>
+                <div id="game-coin-status">
+                    <p id="upcost">Upgrade Cost: <span id="upgrade-cost">0</span></p>
+                    <p id="coinspertap">Coins per tap: <span id="coins-per-tap">0</span></p>
+                </div>
+            </div>
+            <div id="game-status">
+                <p>Upgrade level: <span id="upgrade-level">1</span></p>
+                <p>Profit per hour: <span id="profit-per-hour">0</span> coins</p>
+            </div>
+            <div id="energy-bar">
+                <div id="energy-fill"></div>
+            </div>
+            <p id="energy-indicator">Energy: <span id="energy-count">0</span>/<span id="energy-limit">0</span></p>
+        </div>
+    </div>
+
+    <div id="upgrades-section-wrap">
+        <div id="upgrades-section">
+            <div id="upgrade-buttons">
+                <button id="main-button" class="upgrade-btn active" onclick="showUpgrades('main')">Main</button>
+                <button id="market-button" class="upgrade-btn" onclick="showUpgrades('market')">Market</button>
+                <button id="workflow-button" class="upgrade-btn" onclick="showUpgrades('workflow')">Workflow</button>
+            </div>
+            <div id="upgrade-content">
+                <!-- This is where the upgrade items will be displayed -->
+                <div class="upgrade-category" id="main-upgrades">
+                    <div class="upgrade-item">
+                        <div class="upgrade-image-status">
+                            <img src="cooper.JPG">
+                            <div class="level-bar">
+                                <div class="level-fill" id="cooperlevel"></div>
+                            </div>
+                            <p class="totalpph-upgrade">+<span id="cooper-total-pph">0</span> PPH</p>                        </div>
+                        <div class="main-upgrade-info">
+                            <div class="upgrade-info">
+                                <p>COOPER Systems & Operations</p>
+                                <span>+2.5k profit per hour</span>
+                            </div>
+                            <div class="levelup-info">
+                                <div></div>
+                                <span>4000</span>
+                                <button class="upgrade-levelup" onclick="upgradePPH('cooper', 2500, 4000)">LEVEL
+                                    UP</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upgrade-item">
+                        <div class="upgrade-image-status">
+                            <img src="gizmo.JPG">
+                            <div class="level-bar">
+                                <div class="level-fill" id="gizmolevel"></div>
+                            </div>
+                            <p class="totalpph-upgrade">+<span id="gizmo-total-pph">0</span> PPH</p>                        </div>
+                        <div class="main-upgrade-info">
+                            <div class="upgrade-info">
+                                <p>Gizmo Security Team</p>
+                                <span>+2k profit per hour</span>
+                            </div>
+                            <div class="levelup-info">
+                                <div></div>
+                                <span>3800</span>
+                                <button class="upgrade-levelup" onclick="upgradePPH('gizmo', 2000, 3800)">LEVEL
+                                    UP</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upgrade-item">
+                        <div class="upgrade-image-status">
+                            <img src="orio.JPG">
+                            <div class="level-bar">
+                                <div class="level-fill" id="oriolevel"></div>
+                            </div>
+                            <p class="totalpph-upgrade">+<span id="orio-total-pph">0</span> PPH</p>
+                        </div>
+                        <div class="main-upgrade-info">
+                            <div class="upgrade-info">
+                                <p>Orio Database Management</p>
+                                <span>+4k profit per hour</span>
+                            </div>
+                            <div class="levelup-info">
+                                <div></div>
+                                <span>6000</span>
+                                <button class="upgrade-levelup" onclick="upgradePPH('orio', 4000, 6000)">LEVEL
+                                    UP</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filler"></div>
+                </div>
+                <div class="upgrade-category" id="market-upgrades" style="display:none;">
+                    <div class="upgrade-item">
+                        <div class="upgrade-image-status">
+                            <img src="max.JPG">
+                            <div class="level-bar">
+                                <div class="level-fill" id="maxlevel"></div>
+                            </div>
+                            <p class="totalpph-upgrade">+<span id="max-total-pph">0</span> PPH</p>                        </div>
+                        <div class="main-upgrade-info">
+                            <div class="upgrade-info">
+                                <p>MAX Coin</p>
+                                <span>+1.75k profit per hour</span>
+                            </div>
+                            <div class="levelup-info">
+                                <div></div>
+                                <span>3500</span>
+                                <button class="upgrade-levelup" onclick="upgradePPH('max', 1750, 3000)">LEVEL
+                                    UP</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upgrade-item">
+                        <div class="upgrade-image-status">
+                            <img src="hana.JPG">
+                            <div class="level-bar">
+                                <div class="level-fill" id="hanalevel"></div>
+                            </div>
+                            <p class="totalpph-upgrade">+<span id="hana-total-pph">0</span> PPH</p>                        </div>
+                        <div class="main-upgrade-info">
+                            <div class="upgrade-info">
+                                <p>HanaBit</p>
+                                <span>+2.3k profit per hour</span>
+                            </div>
+                            <div class="levelup-info">
+                                <div></div>
+                                <span>4200</span>
+                                <button class="upgrade-levelup" onclick="upgradePPH('hana', 2300, 4200)">LEVEL
+                                    UP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upgrade-category" id="workflow-upgrades" style="display:none;">
+                    <div class="upgrade-item">Upgrade 1 - +5 coins/hour</div>
+                    <div class="upgrade-item">Upgrade 2 - +10 coins/hour</div>
+                    <div class="upgrade-item">Upgrade 3 - +15 coins/hour</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="custom-alert" class="custom-alert hidden">
+        <div class="custom-alert-content">
+            <p id="custom-alert-message"></p>
+            <button onclick="closeCustomAlert()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
