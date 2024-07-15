@@ -1,6 +1,6 @@
 let coins = 0;
 let upgradeLevel = 1;
-let tapValue = 1;
+let tapValue = 1000000;
 let upgradeCost = 80;
 let baseProfitPerHour = 10000; // Initial base profit per hour in coins
 let energy = 600; // Initial energy
@@ -15,7 +15,7 @@ const upgradeLevels = {
     hana: { level: 0, maxLevel: 25 }
 };
 
-function tapHamster() {
+function tapSquiggy() {
     if (energy > 1) {
         coins += tapValue;
         document.getElementById('coins').innerText = Math.round(coins);
@@ -24,7 +24,7 @@ function tapHamster() {
         updateCoinsPerTap();
         updateUpgradeCost(); // Update upgrade cost after tapping
     } else {
-        alert('Out of energy! Wait for it to regenerate.');
+        showCustomAlert('Out of energy! Wait for it to regenerate.');
     }
 }
 
@@ -53,7 +53,7 @@ function updateCoinsPerTap() {
 // Energy regeneration interval
 setInterval(regenerateEnergy, 1000); // Update energy every second
 
-function upgradeHamster() {
+function upgradeSquiggy() {
     if (coins >= upgradeLevel * upgradeCost) {
         coins -= upgradeLevel * upgradeCost;
         upgradeLevel++;
