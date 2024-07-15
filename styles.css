@@ -477,8 +477,7 @@ body {
 }
 
 .filler {
-    height: 200px;
-    ;
+    height: 400px;
 }
 
 .main-upgrade-info {
@@ -697,5 +696,11 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .levelup-info button, .levelup-info span {
+        scale: 85%;
     }
 }
