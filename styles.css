@@ -351,6 +351,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#game-container h1{
+    font-size: 2rem;
+}
+
 #upgrade {
     background-color: #000000;
     width: 90px;
