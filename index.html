@@ -32,7 +32,8 @@
                     <div id="squiggy" onclick="tapSquiggy()">
                         <img src="squiggy.jpg">
                     </div>
-                    <div id="squiggycoins"><img class="squiggycoin-icon" src="squiggyicon.png">
+                    <div id="squiggycoins">
+                        <img class="squiggycoin-icon" src="squiggyicon.png">
                         <span id="coins">0</span></div>
                     <button id="upgrade" onclick="upgradeSquiggy()">Upgrade</button>
                     <div id="game-coin-status">
@@ -311,6 +312,30 @@
                                     <button class="upgrade-levelup" onclick="upgradePPH('daisy', 320, 170)"><span>LEVEL
                                         UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="daisyside.JPG">
+                                <p class="totalpph-upgrade">+<span id="daisyside-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="daisyside-currentlevel">0</span>/<span
+                                        id="daisyside-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Daisy Side Support System</p>
+                                    <span>+900 profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">550</span>
+                                <div class="levelup-info" id="daisyside-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="daisysidelevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" onclick="upgradePPH('daisyside', 900, 550)"><span>LEVEL
+                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="daisyside-unlock-message" class="unlock-message">Requires  Daisy Development Team
+                                    level 10 to unlock</span>
                             </div>
                         </div>
                         <div class="filler"></div>

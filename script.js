@@ -18,7 +18,8 @@
         sandrei: { level: 0, maxLevel: 28 },
         mark: { level: 0, maxLevel: 30 },
         gilbert: { level: 0, maxLevel: 100 },
-        daisy: { level: 0, maxLevel: 100 }
+        daisy: { level: 0, maxLevel: 100 },
+        daisyside: { level: 0, maxLevel: 80 }
     };
 
     function tapSquiggy() {
@@ -125,15 +126,29 @@
     function checkUpgradeUnlock() {
         const maxLevel = upgradeLevels.max.level;
         const hanaLevel = upgradeLevels.hana.level;
+
         const markUnlockMessage = document.getElementById('mark-unlock-message');
         const markLevelUpInfo = document.getElementById('mark-levelup-info');
-    
+
+        const daisyLevel = upgradeLevels.daisy.level;
+
+        const daisysideUnlockMessage = document.getElementById('daisyside-unlock-message');
+        const daisysideLevelUpInfo = document.getElementById('daisyside-levelup-info');
+
         if (maxLevel >= 5 && hanaLevel >= 5) {
             markUnlockMessage.style.display = 'none';
             markLevelUpInfo.style.display = 'flex';
         } else {
             markUnlockMessage.style.display = 'block';
             markLevelUpInfo.style.display = 'none';
+        }
+
+        if (daisyLevel >= 10) {
+            daisysideUnlockMessage.style.display = 'none';
+            daisysideLevelUpInfo.style.display = 'flex';
+        } else {
+            daisysideUnlockMessage.style.display = 'block';
+            daisysideLevelUpInfo.style.display = 'none';
         }
     }
 
@@ -198,6 +213,8 @@
             case 'gilbert':
                 return 400;
             case 'daisy':
+                return 320;
+            case 'daisyside':
                 return 320;
             default:
                 return 0;
