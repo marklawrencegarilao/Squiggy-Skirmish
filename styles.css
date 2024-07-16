@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    cursor: url("squiggycursor.png"), auto;
     user-select: none; /* Prevents text selection */
     -webkit-user-drag: none; /* Prevents image dragging */
 }
