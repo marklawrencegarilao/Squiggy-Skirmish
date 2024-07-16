@@ -538,10 +538,6 @@ body {
     border-radius: 20px;
 }
 
-.responsive-upgrade.hide {
-    display: none;
-}
-
 .upgrade-levelup {
     background-color: #000000;
     width: 45%;
@@ -774,5 +770,11 @@ body {
 
     .level-bar{
         width: 60%;
+    }
+}
+
+@media (min-width: 601px) {
+    .responsive-upgrade {
+        display: none;
     }
 }
