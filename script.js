@@ -14,6 +14,8 @@
         orio: { level: 0, maxLevel: 15 },
         max: { level: 0, maxLevel: 30 },
         hana: { level: 0, maxLevel: 25 },
+        noel: { level: 0, maxLevel: 25 },
+        sandrei: { level: 0, maxLevel: 28 },
         mark: { level: 0, maxLevel: 30 },
         gilbert: { level: 0, maxLevel: 100 },
         daisy: { level: 0, maxLevel: 100 }
@@ -151,7 +153,7 @@
             checkUpgradeUnlock(); // Check unlock condition for mark upgrade
     
             if (upgrade.level >= upgrade.maxLevel) {
-                upgradeButton.innerText = 'MAXED';
+                upgradeButton.innerText = 'MAX';
                 upgradeButton.classList.add('disabled');
                 upgradeButton.disabled = true;
             }
@@ -187,6 +189,10 @@
                 return 1750;
             case 'hana':
                 return 2300;
+            case 'noel':
+                return 2000;
+            case 'sandrei':
+                return 1800;
             case 'mark':
                 return 5500;
             case 'gilbert':
