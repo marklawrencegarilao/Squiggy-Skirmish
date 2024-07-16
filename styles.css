@@ -538,9 +538,18 @@ body {
     border-radius: 20px;
 }
 
+.responsive-upgrade {
+    display: none;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .upgrade-levelup {
     background-color: #000000;
     width: 45%;
+    height: 40px;
     color: white;
     text-decoration: none;
     font-size: 12px;
@@ -549,6 +558,9 @@ body {
     border-radius: 30px;
     padding: 10px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .upgrade-levelup:hover {
@@ -631,7 +643,8 @@ body {
 .upgrade-image-status {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
 }
 
 
@@ -737,24 +750,33 @@ body {
     }
 
     .upgrade-levelup{
-        width: 33%;
+        width: 35%;
     }
 
     .level-bar{
-        width: 65%;
+        width: 60%;
     }
 }
 
 @media (max-width: 600px) {
-    .levelup-info button, .levelup-info span {
-        scale: 85%;
+    .responsive-upgrade {
+        display: block;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .upgrade-levelup span{
+        display: none;
     }
 
     .upgrade-levelup{
-        width: 65%;
+        width: 35%;
+        min-width: 30px;
     }
 
     .level-bar{
-        width: 43%;
+        width: 60%;
     }
 }
