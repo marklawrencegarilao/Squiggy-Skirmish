@@ -538,7 +538,7 @@ body {
     border-radius: 20px;
 }
 
-.responsive-upgrade {
+.responsive-upgrade.hide {
     display: none;
 }
 
@@ -715,10 +715,6 @@ body {
         width: 33vw;
     }
 
-    .responsive-upgrade {
-        display: none;
-    }
-
     .upgrade-item {
         width: 34vw;
         display: flex;
@@ -740,10 +736,6 @@ body {
 
     .main-upgrade-info {
         width: 60vw;
-    }
-
-    .responsive-upgrade {
-        display: none;
     }
 
     .upgrade-category {

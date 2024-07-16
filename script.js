@@ -220,7 +220,17 @@
     }
     
 
-    // Call updateMaxLevels on page load
+    function checkResponsiveUpgradeDisplay() {
+        var responsiveUpgrades = document.querySelectorAll('.responsive-upgrade');
+        responsiveUpgrades.forEach(function(responsiveUpgrade) {
+            if (window.innerWidth > 600) {
+                responsiveUpgrade.classList.add('hide');
+            } else {
+                responsiveUpgrade.classList.remove('hide');
+            }
+        });
+    }
+
     window.onload = function() {
         updateMaxLevels();
         updateCoinsPerTap();
@@ -229,6 +239,9 @@
         updateCoinsPerTap();
         updateEnergyBar(); // Ensure energy bar is initialized correctly
         checkUpgradeUnlock(); // Initial check for unlock condition
+        checkResponsiveUpgradeDisplay(); // Check display condition on load
+
+        window.addEventListener('resize', checkResponsiveUpgradeDisplay); // Check display condition on resize
     }
     
     function showCustomAlert(message) {
