@@ -37,18 +37,18 @@
                         <span id="coins">0</span></div>
                     <button id="upgrade" onclick="upgradeSquiggy()">Upgrade</button>
                     <div id="game-coin-status">
-                        <p id="upcost">Upgrade Cost: <span id="upgrade-cost">0</span></p>
-                        <p id="coinspertap">Coins per tap: <span id="coins-per-tap">0</span></p>
+                        <p id="upcost">Upgrade Cost: <img class="squiggycoin-small-icon" src="squiggyicon.png"><span id="upgrade-cost">0</span></p>
+                        <p id="coinspertap">Coins per tap: <img class="squiggycoin-small-icon" src="squiggyicon.png"><span id="coins-per-tap">0</span></p>
                     </div>
                 </div>
                 <div id="game-status">
                     <p>Upgrade level: <span id="upgrade-level">1</span></p>
-                    <p>Profit per hour: <span id="profit-per-hour">0</span> coins</p>
+                    <p>Profit per hour: <img class="squiggycoin-pph-icon" src="squiggyicon.png"><span id="profit-per-hour">0</span> coins</p>
                 </div>
                 <div id="energy-bar">
                     <div id="energy-fill"></div>
                 </div>
-                <p id="energy-indicator">Energy: <span id="energy-count">0</span>/<span id="energy-limit">0</span></p>
+                <p id="energy-indicator"><img class="energy-icon" src="energy.png"><span id="energy-count">0</span>/<span id="energy-limit">0</span></p>
             </div>
         </div>
 
@@ -63,117 +63,116 @@
                 <div id="upgrade-content">
                     <!-- This is where the upgrade items will be displayed -->
                     <div class="upgrade-category" id="main-upgrades">
+                        <!-- Squiggy Headquarters Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="squiggy1.JPG">
                                 <p class="totalpph-upgrade">+<span id="squiggy-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="squiggy-currentlevel">0</span>/<span
-                                        id="squiggy-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="squiggy-currentlevel">0</span>/<span id="squiggy-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Squiggy Headquarters</p>
-                                    <span>+1.6k profit per hour</span>
+                                    <span>+<span id="squiggy-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">800</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="squiggy-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="squiggylevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('squiggy', 1600, 800)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="squiggy-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                    
+                        <!-- COOPER Systems & Operations Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="cooper.JPG">
                                 <p class="totalpph-upgrade">+<span id="cooper-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="cooper-currentlevel">0</span>/<span
-                                        id="cooper-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="cooper-currentlevel">0</span>/<span id="cooper-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>COOPER Systems & Operations</p>
-                                    <span>+2.5k profit per hour</span>
+                                    <span>+<span id="cooper-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">4000</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="cooper-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="cooperlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('cooper', 2500, 4000)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="cooper-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                    
+                        <!-- Gizmo Security Team Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="gizmo.JPG">
                                 <p class="totalpph-upgrade">+<span id="gizmo-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gizmo-currentlevel">0</span>/<span
-                                        id="gizmo-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gizmo-currentlevel">0</span>/<span id="gizmo-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gizmo Security Team</p>
-                                    <span>+2k profit per hour</span>
+                                    <span>+<span id="gizmo-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">3800</span>
-
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gizmo-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gizmolevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('gizmo', 2000, 3800)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gizmo-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                    
+                        <!-- Orio Database Management Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="orio.JPG">
                                 <p class="totalpph-upgrade">+<span id="orio-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="orio-currentlevel">0</span>/<span
-                                        id="orio-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="orio-currentlevel">0</span>/<span id="orio-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Orio Database Management</p>
-                                    <span>+4k profit per hour</span>
+                                    <span>+<span id="orio-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">6000</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="orio-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="oriolevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('orio', 4000, 6000)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="orio-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                    
                         <div class="filler"></div>
                     </div>
+                    
+                    
                     <div class="upgrade-category" id="market-upgrades" style="display:none;">
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="max.JPG">
                                 <p class="totalpph-upgrade">+<span id="max-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="max-currentlevel">0</span>/<span
-                                        id="max-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="max-currentlevel">0</span>/<span id="max-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>MaxCoin</p>
-                                    <span>+1.75k profit per hour</span>
+                                    <span>+<span id="max-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">3500</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="max-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="maxlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('max', 1750, 3000)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="max-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
@@ -181,92 +180,108 @@
                             <div class="upgrade-image-status">
                                 <img src="hana.JPG">
                                 <p class="totalpph-upgrade">+<span id="hana-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="hana-currentlevel">0</span>/<span
-                                        id="hana-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="hana-currentlevel">0</span>/<span id="hana-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>E-Mohana</p>
-                                    <span>+2.3k profit per hour</span>
+                                    <span>+<span id="hana-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">4200</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="hana-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="hanalevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('hana', 2300, 4200)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="hana-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="noel.JPG">
                                 <p class="totalpph-upgrade">+<span id="noel-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="noel-currentlevel">0</span>/<span
-                                        id="noel-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="noel-currentlevel">0</span>/<span id="noel-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Yorme Noel</p>
-                                    <span>+2k profit per hour</span>
+                                    <span>+<span id="noel-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">3800</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="noel-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="noellevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('noel', 2000, 3800)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="noel-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="sandrei.JPG">
                                 <p class="totalpph-upgrade">+<span id="sandrei-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="sandrei-currentlevel">0</span>/<span
-                                        id="sandrei-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="sandrei-currentlevel">0</span>/<span id="sandrei-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Sandrei Token</p>
-                                    <span>+1.8k profit per hour</span>
+                                    <span>+<span id="sandrei-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">3500</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="sandrei-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="sandreilevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('sandrei', 1800, 3500)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="sandrei-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="mark.JPG">
                                 <p class="totalpph-upgrade">+<span id="mark-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="mark-currentlevel">0</span>/<span
-                                        id="mark-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="mark-currentlevel">0</span>/<span id="mark-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Markereum</p>
-                                    <span>+5.5k profit per hour</span>
+                                    <span>+<span id="mark-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">6500</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="mark-cost">0</span></span>
                                 <div class="levelup-info" id="mark-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="marklevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('mark', 5500, 6500)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="mark-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="mark-unlock-message" class="unlock-message">Requires MaxCoin and E-Mohana
-                                    level 5 to unlock</span>
+                                <span id="mark-unlock-message" class="unlock-message">Requires MaxCoin and E-Mohana level 5 to unlock</span>
                             </div>
                         </div>
+
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="beans.JPG">
+                                <p class="totalpph-upgrade">+<span id="beans-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="beans-currentlevel">0</span>/<span id="beans-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Beans Blockchain</p>
+                                    <span>+<span id="beans-pph">0</span> profit per hour</span>
+                                </div>
+                                <p class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="beans-cost">0</span></p>
+                                <div class="levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="beanslevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="beans-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="filler"></div>
                     </div>
                     <div class="upgrade-category" id="workflow-upgrades" style="display:none;">
@@ -274,93 +289,89 @@
                             <div class="upgrade-image-status">
                                 <img src="gilbert.JPG">
                                 <p class="totalpph-upgrade">+<span id="gilbert-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gilbert-currentlevel">0</span>/<span
-                                        id="gilbert-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gilbert-currentlevel">0</span>/<span id="gilbert-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gilbert Merlin Solar Workforce</p>
-                                    <span>+400 profit per hour</span>
+                                    <span>+<span id="gilbert-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">200</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gilbert-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gilbertlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('gilbert', 400, 200)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gilbert-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="daisy.JPG">
                                 <p class="totalpph-upgrade">+<span id="daisy-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="daisy-currentlevel">0</span>/<span
-                                        id="daisy-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="daisy-currentlevel">0</span>/<span id="daisy-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Daisy Development Team</p>
-                                    <span>+320 profit per hour</span>
+                                    <span>+<span id="daisy-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">150</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="daisy-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="daisylevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('daisy', 320, 170)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="daisy-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="gilbertside.JPG">
                                 <p class="totalpph-upgrade">+<span id="gilbertside-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gilbertside-currentlevel">0</span>/<span
-                                        id="gilbertside-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gilbertside-currentlevel">0</span>/<span id="gilbertside-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gilbert Side Support System</p>
-                                    <span>+550 profit per hour</span>
+                                    <span>+<span id="gilbertside-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">600</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gilbertside-cost">0</span></span>
                                 <div class="levelup-info" id="gilbertside-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gilbertsidelevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('gilbertside', 550, 600)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gilbertside-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="gilbertside-unlock-message" class="unlock-message">Requires  Gilbert Merlin Solar Workforce
-                                    level 10 to unlock</span>
+                                <span id="gilbertside-unlock-message" class="unlock-message">Requires Gilbert Merlin Solar Workforce level 10 to unlock</span>
                             </div>
                         </div>
+                        
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="daisyside.JPG">
                                 <p class="totalpph-upgrade">+<span id="daisyside-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="daisyside-currentlevel">0</span>/<span
-                                        id="daisyside-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="daisyside-currentlevel">0</span>/<span id="daisyside-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Daisy Side Support System</p>
-                                    <span>+900 profit per hour</span>
+                                    <span>+<span id="daisyside-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png">900</span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="daisyside-cost">0</span></span>
                                 <div class="levelup-info" id="daisyside-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="daisysidelevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" onclick="upgradePPH('daisyside', 900, 900)"><span>LEVEL
-                                        UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="daisyside-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="daisyside-unlock-message" class="unlock-message">Requires  Daisy Development Team
-                                    level 10 to unlock</span>
+                                <span id="daisyside-unlock-message" class="unlock-message">Requires Daisy Development Team level 10 to unlock</span>
                             </div>
+                        </div>
+                        
+                        
                         </div>
                     </div>
                 </div>
