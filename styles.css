@@ -392,6 +392,33 @@ body {
     position: relative;
 }
 
+.squiggycoin-small-icon{
+    height: 10px;
+    width: 10px;
+    margin-right: 2px;
+    margin-left: 3px;
+    top: 1px;
+    position: relative;
+}
+
+.squiggycoin-pph-icon{
+    height: 12px;
+    width: 12px;
+    margin-right: 2px;
+    margin-left: 3px;
+    top: 2px;
+    position: relative;
+}
+
+.energy-icon{
+    height: 20px;
+    width: 20px;
+    margin-right: 2px;
+    margin-left: 3px;
+    top: 5px;
+    position: relative;
+}
+
 .squiggycoin-icon-upgrade{
     display: inline;
     max-height: 20px;
