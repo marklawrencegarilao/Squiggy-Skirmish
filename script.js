@@ -1,4 +1,4 @@
-    let coins = 1000000;
+    let coins = 1000000000;
     let upgradeLevel = 1;
     let tapValue = 5;
     let upgradeCost = 80;
