@@ -737,7 +737,7 @@ body {
     }
 
     .upgrade-item {
-        width: 34vw;
+        width: 33vw;
         display: flex;
 
     }
@@ -751,12 +751,44 @@ body {
 
 @media (max-width: 864px) {
     .upgrade-item {
-        width: 60vw;
+        width: 70vw;
         display: flex;
     }
 
+    body{
+        display: flex;
+        width: calc(100vw - 17px);
+    }
+
+    #upgrades-section-wrap {
+        margin: 0px;
+        width: calc(100vw - 17px);
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #game-container-wrap {
+        margin: 0px;
+        width: calc(100vw - 17px);;
+        max-width:100%;
+        padding: 0px;
+        box-shadow: none;
+        border-radius: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #game-container, #upgrades-section{
+        width: 100%;
+        max-width:100%;
+        border-radius: 0px;
+    }
+
     .main-upgrade-info {
-        width: 60vw;
+        width: 100vw;
     }
 
     .upgrade-category {
@@ -766,11 +798,11 @@ body {
         align-items: center;
     }
 
-    .upgrade-levelup{
+    .upgrade-levelup {
         width: 35%;
     }
 
-    .level-bar{
+    .level-bar {
         width: 60%;
     }
 }
