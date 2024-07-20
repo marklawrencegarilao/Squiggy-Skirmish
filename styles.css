@@ -212,10 +212,10 @@ body {
 
 #game-container-wrap {
     position: relative;
-    background: linear-gradient(to top, rgb(0, 50, 88), aqua);
+    background: linear-gradient(to top, rgb(12, 12, 12), aqua);
     padding: 2px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 145, 255, 0.502);
+    box-shadow: 0 0 10px rgba(0, 145, 255, 0.202);
 }
 
 #coins {
@@ -344,10 +344,10 @@ body {
 #upgrades-section-wrap {
     margin-left: 20px;
     position: relative;
-    background: linear-gradient(to bottom, rgb(0, 50, 88), aqua);
+    background: linear-gradient(to bottom, rgb(12, 12, 12), aqua);
     padding: 2px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 145, 255, 0.502);
+    box-shadow: 0 0 10px rgba(0, 145, 255, 0.202);
 }
 
 #game-container h1,
@@ -784,12 +784,12 @@ body {
 
     body{
         display: flex;
-        width: calc(100vw - 17px);
+        width: 100vw;
     }
 
     #upgrades-section-wrap {
         margin: 0px;
-        width: calc(100vw - 17px);
+        width: 100vw;
         padding: 0px;
         box-shadow: none;
         border-radius: 0px;
@@ -799,7 +799,7 @@ body {
 
     #game-container-wrap {
         margin: 0px;
-        width: calc(100vw - 17px);;
+        width: 100vw;
         max-width:100%;
         padding: 0px;
         box-shadow: none;
@@ -831,6 +831,23 @@ body {
 
     .level-bar {
         width: 60%;
+    }
+
+    .area {
+        background: black;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    
+    }
+    
+    .circles {
+        display: none;
+    }
+    
+    .circles li {
+        display: none;
+    
     }
 }
 
