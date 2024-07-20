@@ -25,6 +25,8 @@
         </ul>
     </div>
     <div id="main">
+        <!-- This is where the clicker, coins, profit per hour, and
+         energy is displayed -->
         <div id="game-container-wrap">
             <div id="game-container">
                 <h1>SQUIGGY SKIRMISH</h1>
@@ -34,24 +36,30 @@
                     </div>
                     <div id="squiggycoins">
                         <img class="squiggycoin-icon" src="squiggyicon.png">
-                        <span id="coins">0</span></div>
+                        <span id="coins">0</span>
+                    </div>
                     <button id="upgrade" onclick="upgradeSquiggy()">Upgrade</button>
                     <div id="game-coin-status">
-                        <p id="upcost">Upgrade Cost: <img class="squiggycoin-small-icon" src="squiggyicon.png"><span id="upgrade-cost">0</span></p>
-                        <p id="coinspertap">Coins per tap: <img class="squiggycoin-small-icon" src="squiggyicon.png"><span id="coins-per-tap">0</span></p>
+                        <p id="upcost">Upgrade Cost: <img class="squiggycoin-small-icon" src="squiggyicon.png"><span
+                                id="upgrade-cost">0</span></p>
+                        <p id="coinspertap">Coins per tap: <img class="squiggycoin-small-icon"
+                                src="squiggyicon.png"><span id="coins-per-tap">0</span></p>
                     </div>
                 </div>
                 <div id="game-status">
                     <p>Upgrade level: <span id="upgrade-level">1</span></p>
-                    <p>Profit per hour: <img class="squiggycoin-pph-icon" src="squiggyicon.png"><span id="profit-per-hour">0</span> coins</p>
+                    <p>Profit per hour: <img class="squiggycoin-pph-icon" src="squiggyicon.png"><span
+                            id="profit-per-hour">0</span> coins</p>
                 </div>
                 <div id="energy-bar">
                     <div id="energy-fill"></div>
                 </div>
-                <p id="energy-indicator"><img class="energy-icon" src="energy.png"><span id="energy-count">0</span>/<span id="energy-limit">0</span></p>
+                <p id="energy-indicator"><img class="energy-icon" src="energy.png"><span
+                        id="energy-count">0</span>/<span id="energy-limit">0</span></p>
             </div>
         </div>
 
+        <!-- This is where the main upgrades are-->
         <div id="upgrades-section-wrap">
             <div id="upgrades-section">
                 <div id="upgrade-buttons">
@@ -68,315 +76,642 @@
                             <div class="upgrade-image-status">
                                 <img src="squiggy1.JPG">
                                 <p class="totalpph-upgrade">+<span id="squiggy-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="squiggy-currentlevel">0</span>/<span id="squiggy-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="squiggy-currentlevel">0</span>/<span
+                                        id="squiggy-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Squiggy Headquarters</p>
                                     <span>+<span id="squiggy-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="squiggy-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="squiggy-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="squiggylevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="squiggy-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="squiggy-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                    
+
                         <!-- COOPER Systems & Operations Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="cooper.JPG">
                                 <p class="totalpph-upgrade">+<span id="cooper-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="cooper-currentlevel">0</span>/<span id="cooper-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="cooper-currentlevel">0</span>/<span
+                                        id="cooper-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>COOPER Systems & Operations</p>
                                     <span>+<span id="cooper-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="cooper-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="cooper-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="cooperlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="cooper-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="cooper-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                    
+
                         <!-- Gizmo Security Team Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="gizmo.JPG">
                                 <p class="totalpph-upgrade">+<span id="gizmo-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gizmo-currentlevel">0</span>/<span id="gizmo-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gizmo-currentlevel">0</span>/<span
+                                        id="gizmo-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gizmo Security Team</p>
                                     <span>+<span id="gizmo-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gizmo-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="gizmo-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gizmolevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="gizmo-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gizmo-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                    
+
                         <!-- Orio Database Management Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="orio.JPG">
                                 <p class="totalpph-upgrade">+<span id="orio-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="orio-currentlevel">0</span>/<span id="orio-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="orio-currentlevel">0</span>/<span
+                                        id="orio-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Orio Database Management</p>
                                     <span>+<span id="orio-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="orio-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="orio-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="oriolevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="orio-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="orio-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                    
+
+                        <!-- Squiggy's NOSE Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="squiggynose.JPG">
+                                <p class="totalpph-upgrade">+<span id="squiggynose-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="squiggynose-currentlevel">0</span>/<span
+                                        id="squiggynose-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Squiggy's NOSE (Navigating Opportunities & Strategic Excellence)</p>
+                                    <span>+<span id="squiggynose-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="squiggynose-cost">0</span></span>
+                                <div class="levelup-info" id="squiggynose-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="squiggynoselevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="squiggynose-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="squiggynose-unlock-message" class="unlock-message">Requires Squiggy Headquarters
+                                    level 25 to unlock</span>
+                            </div>
+                        </div>
+
+                        <!-- COOPER Quantum Engineering Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="cooperbite.JPG">
+                                <p class="totalpph-upgrade">+<span id="cooperbite-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="cooperbite-currentlevel">0</span>/<span
+                                        id="cooperbite-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>COOPER Quantum Engineering</p>
+                                    <span>+<span id="cooperbite-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="cooperbite-cost">0</span></span>
+                                <div class="levelup-info" id="cooperbite-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="cooperbitelevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="cooperbite-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="cooperbite-unlock-message" class="unlock-message">Requires COOPER Systems & Operations
+                                    MAX level to unlock</span>
+                            </div>
+                        </div>
+
+                        <!-- Gizmo Advanced Defense Unit Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="gizmogun.JPG">
+                                <p class="totalpph-upgrade">+<span id="gizmogun-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="gizmogun-currentlevel">0</span>/<span
+                                        id="gizmogun-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Advanced Gizmo Defense Unit</p>
+                                    <span>+<span id="gizmogun-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="gizmogun-cost">0</span></span>
+                                <div class="levelup-info" id="gizmogun-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="gizmogunlevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="gizmogun-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="gizmogun-unlock-message" class="unlock-message">Requires Orio Database Management
+                                    MAX level to unlock</span>
+                            </div>
+                        </div>
+
+                        <!-- Gizmo Advanced Defense Unit Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="orioass.JPG">
+                                <p class="totalpph-upgrade">+<span id="orioass-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="orioass-currentlevel">0</span>/<span
+                                        id="orioass-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Orio's ASS (Advanced Storage Supervision)</p>
+                                    <span>+<span id="orioass-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="orioass-cost">0</span></span>
+                                <div class="levelup-info" id="orioass-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="orioasslevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="orioass-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="orioass-unlock-message" class="unlock-message">Requires Gizmo Security Team
+                                    MAX level to unlock</span>
+                            </div>
+                        </div>
+
                         <div class="filler"></div>
                     </div>
-                    
-                    
+
+
                     <div class="upgrade-category" id="market-upgrades" style="display:none;">
+
+                        <!-- MaxCoin Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="max.JPG">
                                 <p class="totalpph-upgrade">+<span id="max-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="max-currentlevel">0</span>/<span id="max-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="max-currentlevel">0</span>/<span
+                                        id="max-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>MaxCoin</p>
                                     <span>+<span id="max-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="max-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="max-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="maxlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="max-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="max-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- E-Mohana Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="hana.JPG">
                                 <p class="totalpph-upgrade">+<span id="hana-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="hana-currentlevel">0</span>/<span id="hana-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="hana-currentlevel">0</span>/<span
+                                        id="hana-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>E-Mohana</p>
                                     <span>+<span id="hana-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="hana-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="hana-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="hanalevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="hana-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="hana-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="upgrade-item">
-                            <div class="upgrade-image-status">
-                                <img src="noel.JPG">
-                                <p class="totalpph-upgrade">+<span id="noel-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="noel-currentlevel">0</span>/<span id="noel-maxlevel">0</span></p>
-                            </div>
-                            <div class="main-upgrade-info">
-                                <div class="upgrade-info">
-                                    <p>Yorme Noel</p>
-                                    <span>+<span id="noel-pph">0</span> profit per hour</span>
-                                </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="noel-cost">0</span></span>
-                                <div class="levelup-info">
-                                    <div class="level-bar">
-                                        <div class="level-fill" id="noellevel"></div>
-                                    </div>
-                                    <button class="upgrade-levelup" id="noel-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="upgrade-item">
-                            <div class="upgrade-image-status">
-                                <img src="sandrei.JPG">
-                                <p class="totalpph-upgrade">+<span id="sandrei-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="sandrei-currentlevel">0</span>/<span id="sandrei-maxlevel">0</span></p>
-                            </div>
-                            <div class="main-upgrade-info">
-                                <div class="upgrade-info">
-                                    <p>Sandrei Token</p>
-                                    <span>+<span id="sandrei-pph">0</span> profit per hour</span>
-                                </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="sandrei-cost">0</span></span>
-                                <div class="levelup-info">
-                                    <div class="level-bar">
-                                        <div class="level-fill" id="sandreilevel"></div>
-                                    </div>
-                                    <button class="upgrade-levelup" id="sandrei-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
-                                </div>
-                            </div>
-                        </div>
-                        
+
+                        <!-- Markereum Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="mark.JPG">
                                 <p class="totalpph-upgrade">+<span id="mark-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="mark-currentlevel">0</span>/<span id="mark-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="mark-currentlevel">0</span>/<span
+                                        id="mark-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Markereum</p>
                                     <span>+<span id="mark-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="mark-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="mark-cost">0</span></span>
                                 <div class="levelup-info" id="mark-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="marklevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="mark-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="mark-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="mark-unlock-message" class="unlock-message">Requires MaxCoin and E-Mohana level 5 to unlock</span>
+                                <span id="mark-unlock-message" class="unlock-message">Requires MaxCoin and E-Mohana
+                                    level 15 to unlock</span>
                             </div>
                         </div>
 
+                        <!-- Yorme Noel Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="noel.JPG">
+                                <p class="totalpph-upgrade">+<span id="noel-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="noel-currentlevel">0</span>/<span
+                                        id="noel-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Yorme Noel</p>
+                                    <span>+<span id="noel-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="noel-cost">0</span></span>
+                                <div class="levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="noellevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="noel-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sandrei Token Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="sandrei.JPG">
+                                <p class="totalpph-upgrade">+<span id="sandrei-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="sandrei-currentlevel">0</span>/<span
+                                        id="sandrei-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Sandrei Token</p>
+                                    <span>+<span id="sandrei-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="sandrei-cost">0</span></span>
+                                <div class="levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="sandreilevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="sandrei-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Elijax Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="elijah.JPG">
+                                <p class="totalpph-upgrade">+<span id="elijah-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="elijah-currentlevel">0</span>/<span
+                                        id="elijah-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Elijax</p>
+                                    <span>+<span id="elijah-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="elijah-cost">0</span></span>
+                                <div class="levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="elijahlevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="elijah-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alpha Legion Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="alphalegion.JPG">
+                                <p class="totalpph-upgrade">+<span id="alphalegion-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="alphalegion-currentlevel">0</span>/<span
+                                        id="alphalegion-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Alpha Legion Crypto Specialists</p>
+                                    <span>+<span id="alphalegion-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="alphalegion-cost">0</span></span>
+                                <div class="levelup-info" id="alphalegion-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="alphalegionlevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="alphalegion-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="alphalegion-unlock-message" class="unlock-message">Requires Markereum, Yorme Noel,
+                                    Sandrei Token, and Elijax MAX level to unlock</span>
+                            </div>
+                        </div>
+
+                        <!-- Beans Blockchain Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="beans.JPG">
                                 <p class="totalpph-upgrade">+<span id="beans-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="beans-currentlevel">0</span>/<span id="beans-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="beans-currentlevel">0</span>/<span
+                                        id="beans-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Beans Blockchain</p>
                                     <span>+<span id="beans-pph">0</span> profit per hour</span>
                                 </div>
-                                <p class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="beans-cost">0</span></p>
+                                <p class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="beans-cost">0</span></p>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="beanslevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="beans-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="beans-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <!-- BeanByte Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="beans2.JPG">
+                                <p class="totalpph-upgrade">+<span id="beans2-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="beans2-currentlevel">0</span>/<span
+                                        id="beans2-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>BeanByte</p>
+                                    <span>+<span id="beans2-pph">0</span> profit per hour</span>
+                                </div>
+                                <p class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="beans2-cost">0</span></p>
+                                <div class="levelup-info" id="beans2-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="beans2level"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="beans2-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="beans2-unlock-message" class="unlock-message">Requires Beans Blockchain level
+                                    15 to unlock</span>
+                            </div>
+                        </div>
+
+                        <!-- TacoBit Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="beans3.JPG">
+                                <p class="totalpph-upgrade">+<span id="beans3-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="beans3-currentlevel">0</span>/<span
+                                        id="beans3-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>TacoBit Beans & Tortillos</p>
+                                    <span>+<span id="beans3-pph">0</span> profit per hour</span>
+                                </div>
+                                <p class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="beans3-cost">0</span></p>
+                                <div class="levelup-info" id="beans3-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="beans3level"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="beans3-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="beans3-unlock-message" class="unlock-message">Requires Beans Blockchain MAX level
+                                     to unlock</span>
+                            </div>
+                        </div>
+
                         <div class="filler"></div>
                     </div>
                     <div class="upgrade-category" id="workflow-upgrades" style="display:none;">
+
+                        <!-- Gilbert Merlin Solar Workforce Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="gilbert.JPG">
                                 <p class="totalpph-upgrade">+<span id="gilbert-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gilbert-currentlevel">0</span>/<span id="gilbert-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gilbert-currentlevel">0</span>/<span
+                                        id="gilbert-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gilbert Merlin Solar Workforce</p>
                                     <span>+<span id="gilbert-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gilbert-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="gilbert-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gilbertlevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="gilbert-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gilbert-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <!-- Daisy Development Team Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="daisy.JPG">
                                 <p class="totalpph-upgrade">+<span id="daisy-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="daisy-currentlevel">0</span>/<span id="daisy-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="daisy-currentlevel">0</span>/<span
+                                        id="daisy-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Daisy Development Team</p>
                                     <span>+<span id="daisy-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="daisy-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="daisy-cost">0</span></span>
                                 <div class="levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="daisylevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="daisy-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="daisy-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <!-- Gilbert Side Support System Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="gilbertside.JPG">
                                 <p class="totalpph-upgrade">+<span id="gilbertside-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="gilbertside-currentlevel">0</span>/<span id="gilbertside-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="gilbertside-currentlevel">0</span>/<span
+                                        id="gilbertside-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Gilbert Side Support System</p>
                                     <span>+<span id="gilbertside-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="gilbertside-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="gilbertside-cost">0</span></span>
                                 <div class="levelup-info" id="gilbertside-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="gilbertsidelevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="gilbertside-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="gilbertside-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="gilbertside-unlock-message" class="unlock-message">Requires Gilbert Merlin Solar Workforce level 25 to unlock</span>
+                                <span id="gilbertside-unlock-message" class="unlock-message">Requires Gilbert Merlin
+                                    Solar Workforce level 25 to unlock</span>
                             </div>
                         </div>
-                        
+
+                        <!-- Daisy Side Support System Upgrade Item -->
                         <div class="upgrade-item">
                             <div class="upgrade-image-status">
                                 <img src="daisyside.JPG">
                                 <p class="totalpph-upgrade">+<span id="daisyside-total-pph">0</span> PPH</p>
-                                <p class="upgrade-level">LVL <span id="daisyside-currentlevel">0</span>/<span id="daisyside-maxlevel">0</span></p>
+                                <p class="upgrade-level">LVL <span id="daisyside-currentlevel">0</span>/<span
+                                        id="daisyside-maxlevel">0</span></p>
                             </div>
                             <div class="main-upgrade-info">
                                 <div class="upgrade-info">
                                     <p>Daisy Side Support System</p>
                                     <span>+<span id="daisyside-pph">0</span> profit per hour</span>
                                 </div>
-                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade" src="squiggyicon.png"><span id="daisyside-cost">0</span></span>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="daisyside-cost">0</span></span>
                                 <div class="levelup-info" id="daisyside-levelup-info">
                                     <div class="level-bar">
                                         <div class="level-fill" id="daisysidelevel"></div>
                                     </div>
-                                    <button class="upgrade-levelup" id="daisyside-upgrade-button"><span>LEVEL UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
+                                    <button class="upgrade-levelup" id="daisyside-upgrade-button"><span>LEVEL
+                                            UP</span><img class="responsive-upgrade" src="upgrade.png"></button>
                                 </div>
-                                <span id="daisyside-unlock-message" class="unlock-message">Requires Daisy Development Team level 25 to unlock</span>
+                                <span id="daisyside-unlock-message" class="unlock-message">Requires Daisy Development
+                                    Team level 25 to unlock</span>
                             </div>
                         </div>
-                        
-                        
+
+                        <!-- Tito Boyet's Investor's Guild Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="boyet.JPG">
+                                <p class="totalpph-upgrade">+<span id="boyet-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="boyet-currentlevel">0</span>/<span
+                                        id="boyet-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Tito Boyet's Investor's Guild</p>
+                                    <span>+<span id="boyet-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="boyet-cost">0</span></span>
+                                <div class="levelup-info" id="boyet-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="boyetlevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="boyet-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="boyet-unlock-message" class="unlock-message">Requires Gilbert Merlin Solar
+                                    Workforce level 50 and
+                                    Gilbert Side Support System level 25 to unlock</span>
+                            </div>
                         </div>
+
+                        <!--  Upgrade Item -->
+                        <div class="upgrade-item">
+                            <div class="upgrade-image-status">
+                                <img src="pinkfloyd.JPG">
+                                <p class="totalpph-upgrade">+<span id="pinkfloyd-total-pph">0</span> PPH</p>
+                                <p class="upgrade-level">LVL <span id="pinkfloyd-currentlevel">0</span>/<span
+                                        id="pinkfloyd-maxlevel">0</span></p>
+                            </div>
+                            <div class="main-upgrade-info">
+                                <div class="upgrade-info">
+                                    <p>Tito Floyd's Tactical Haven</p>
+                                    <span>+<span id="pinkfloyd-pph">0</span> profit per hour</span>
+                                </div>
+                                <span class="upgrade-cost-label"><img class="squiggycoin-icon-upgrade"
+                                        src="squiggyicon.png"><span id="pinkfloyd-cost">0</span></span>
+                                <div class="levelup-info" id="pinkfloyd-levelup-info">
+                                    <div class="level-bar">
+                                        <div class="level-fill" id="pinkfloydlevel"></div>
+                                    </div>
+                                    <button class="upgrade-levelup" id="pinkfloyd-upgrade-button"><span>LEVEL UP</span><img
+                                            class="responsive-upgrade" src="upgrade.png"></button>
+                                </div>
+                                <span id="pinkfloyd-unlock-message" class="unlock-message">Requires Daisy Development Team level 50 and
+                                    Daisy Side Support System level 25 to unlock</span>
+                            </div>
+                        </div>
+
+                        <div class="filler"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
