@@ -1,6 +1,6 @@
-let coins = 1000000000;
+let coins = 0;
 let upgradeLevel = 1;
-let tapValue = 10000000;
+let tapValue = 10;
 let upgradeCost = 80;
 let baseProfitPerHour = 10000; // Initial base profit per hour in coins
 let energy = 600; // Initial energy
@@ -17,7 +17,9 @@ const upgradeLevels = {
     gizmogun: { level: 0, maxLevel: 12 },
     orioass: { level: 0, maxLevel: 20 },
     max: { level: 0, maxLevel: 30 },
+    zestymax: { level: 0, maxLevel: 30},
     hana: { level: 0, maxLevel: 25 },
+    hanabishi: { level: 0, maxLevel: 25 },
     mark: { level: 0, maxLevel: 30 },
     noel: { level: 0, maxLevel: 25 },
     sandrei: { level: 0, maxLevel: 28 },
@@ -89,11 +91,23 @@ const upgrades = {
         costIncreaseRate: 1.3,
         profitIncreaseRate: 1.08
     },
+    zestymax: {
+        baseCost: 5000,
+        baseProfitIncrease: 2350,
+        costIncreaseRate: 1.31,
+        profitIncreaseRate: 1.082
+    },
     hana: {
         baseCost: 4200,
         baseProfitIncrease: 2300,
         costIncreaseRate: 1.35,
         profitIncreaseRate: 1.07
+    },
+    hanabishi: {
+        baseCost: 8000,
+        baseProfitIncrease: 4600,
+        costIncreaseRate: 1.37,
+        profitIncreaseRate: 1.075
     },
     mark: {
         baseCost: 6500,
@@ -339,6 +353,14 @@ function checkUpgradeUnlock() {
         { level: upgradeLevels.sandrei.level, unlockLevel: 28 },
         { level: upgradeLevels.elijah.level, unlockLevel: 25 }
     ], true);
+
+    updateUnlockStatus('zestymax-unlock-message', 'zestymax-levelup-info', [
+        { level: upgradeLevels.max.level, unlockLevel: 30 }
+    ], true);
+
+    updateUnlockStatus('hanabishi-unlock-message', 'hanabishi-levelup-info', [
+        { level: upgradeLevels.hana.level, unlockLevel: 30 }
+    ], true);
 }
 
 
@@ -424,7 +446,7 @@ function showUpgrades(category) {
     buttons.forEach(button => button.classList.remove('active'));
 
     // Determine the layout type based on window width
-    let layoutType = window.innerWidth <= 864 ? 'flex' : 'grid';
+    let layoutType = window.innerWidth = 'grid';
 
     mainUpgrades.style.display = 'none';
     marketUpgrades.style.display = 'none';
